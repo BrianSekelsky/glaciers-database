@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import Glacier from "./Glacier";
 import Sketch from './P5Sketch';
+import p5 from 'react-p5';
 
 function Glaciers() {
     const [data, setData] = useState(null);
     const [glacierList, setGlacierList] = useState([]);
 
     useEffect(() => {
-        fetch('/glaciers.json')
+        fetch('/manyglaciers.json')
             .then(response => response.json())
             .then(data => {
                 setData(data);
@@ -31,6 +32,11 @@ function Glaciers() {
         <div>
             <div className='sketch'>
                 <Sketch glaciers={glacierList} />
+                <div className="absolute bottom-48 left-34 bg-black border p-4 text-left">
+                    <p>{glacierList[1].name}</p>
+                    <p>{glacierList[1].latitude}</p>
+                    <p>{glacierList[1].longitude}</p>
+                </div>
             </div>
         </div>
     );
