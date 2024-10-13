@@ -48,7 +48,7 @@ function Glaciers() {
             <div className='sketch border'>
                 <Sketch glaciers={glacierList} />
             </div>
-            {/* <div className="w-100 justify-between flex mt-8 mb-4 items-center">
+            <div className="w-100 justify-between flex mt-8 mb-4 items-center">
                 <div className="flex justify-left gap-2">
                     <input
                         type="text"
@@ -69,7 +69,7 @@ function Glaciers() {
                     <button onClick={() => setActiveTab("library")} className={activeTab === "library" ? "active" : ""}>CARDS</button>
                 </div>
             </div>
-            <Renderer myActiveTab={activeTab} myGlaciers={filteredGlacierList} />   */}
+            <Renderer myActiveTab={activeTab} myGlaciers={filteredGlacierList} />
         </div>
     );
 }
