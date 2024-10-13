@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Glacier from "./Glacier";
 import Sketch from './P5Sketch';
 import p5 from 'react-p5';
+import Library from "./Library";
 
 function Glaciers() {
     const [data, setData] = useState(null);
@@ -30,7 +31,7 @@ function Glaciers() {
 
     return (
         <div>
-            <div className='sketch'>
+            <div className='sketch border'>
                 <Sketch glaciers={glacierList} />
                 <div className="absolute bottom-48 left-34 bg-black border p-4 text-left">
                     <p>{glacierList[1].name}</p>
@@ -38,6 +39,7 @@ function Glaciers() {
                     <p>{glacierList[1].longitude}</p>
                 </div>
             </div>
+            <Library glaciers={glacierList} />
         </div>
     );
 }
