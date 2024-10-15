@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import Glacier from "./Glacier";
-import Sketch from './P5Sketch';
-import p5 from 'react-p5';
-import Renderer from "./Renderer";
+import Glacier from "./Glacier.jsx";
+import Renderer from "./Renderer.jsx";
 
 import { MapContainer, TileLayer, useMap } from 'react-leaflet'
 
@@ -14,7 +12,7 @@ function Glaciers() {
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
-        fetch('/smallTest.json')
+        fetch('/glaciers.json')
             .then(response => response.json())
             .then(data => {
                 setData(data);
