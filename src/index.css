@@ -19,6 +19,6 @@ code {
 }
 
 .leaflet-container {
-  height: 600px;
+  height: 90vh;
   width: 100%;
 }
